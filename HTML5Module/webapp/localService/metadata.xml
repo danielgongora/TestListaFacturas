@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="WI08.GWLISTFAC_SRV" xml:lang="es" sap:schema-version="1"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ListInvoice" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Bukrs"/>
+                    <PropertyRef Name="Refdoc"/>
+                    <PropertyRef Name="Reftyp"/>
+                    <PropertyRef Name="Gjahr"/>
+                </Key>
+                <Property Name="Bukrs" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sociedad" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Refdoc" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Nº documento factura" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Reftyp" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Cl.doc.ref." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gjahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Ejercicio" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Kunnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Cliente" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Kunnrnam" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="Nombre" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vkorg" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="Organiz.ventas" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vtweg" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="Canal distrib." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Total" Type="Edm.String" MaxLength="18" sap:unicode="false" sap:label="Total MX" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Waers" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="Moneda" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+                <Property Name="TaxAmount" Type="Edm.String" MaxLength="18" sap:unicode="false" sap:label="Importe impuestos MX" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WitholdAmount" Type="Edm.String" MaxLength="18" sap:unicode="false" sap:label="Total impuestos MX" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fkdat" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Fecha factura" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ernam" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Creado por" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Erdat" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Creado el" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Erzet" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Hora" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Aenam" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Modificado por" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Aedat" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Modificado el" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FechaC" Type="Edm.String" MaxLength="19" sap:unicode="false" sap:label="Fecha de anulación" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Flgerr" Type="Edm.Boolean" sap:unicode="false" sap:label="Flg Errores" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FlgAdd" Type="Edm.Boolean" sap:unicode="false" sap:label="Flag Addenda" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FlgEadd" Type="Edm.Boolean" sap:unicode="false" sap:label="Error Flag Addenda" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FlgEcor" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Flag Error de Correo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="Status factura" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Statustxt" Type="Edm.String" MaxLength="60" sap:unicode="false" sap:label="Descripción breve" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TipoRel" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="Tipo Relación entre CFDI" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Usocfdi" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Uso CFDI MX" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Metpag" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Metodo de pago MX" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Forpag" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="Forma de pago MX" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Uuid" Type="Edm.String" MaxLength="36" sap:unicode="false" sap:label="UUID: Unique Identif" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FechaTimbrado" Type="Edm.String" MaxLength="19" sap:unicode="false" sap:label="Fecha Timbrado" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rescode" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Respuesta SAT" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Version" Type="Edm.String" MaxLength="6" sap:unicode="false" sap:label="Version MX" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RegTaxNumber" Type="Edm.String" MaxLength="13" sap:unicode="false" sap:label="RFC Receptor" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Serie" Type="Edm.String" MaxLength="25" sap:unicode="false" sap:label="Serie documento MX" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Folio" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Folio documento MX" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoCertificadoSat" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Nro Certificado SAT" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoCertificadoCfd" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Nro. Certificado CFD" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rfcprovcertif" Type="Edm.String" MaxLength="13" sap:unicode="false" sap:label="RFC PAC" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Leyenda" Type="Edm.String" MaxLength="150" sap:unicode="false" sap:label="Leyenda" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SelloCfd" Type="Edm.String" sap:unicode="false" sap:label="Sello CFD" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SelloSat" Type="Edm.String" sap:unicode="false" sap:label="Sello SAT" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="WI08_GWLISTFAC_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ListInvoiceSet" EntityType="WI08.GWLISTFAC_SRV.ListInvoice" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <FunctionImport Name="f_ListInvoice" ReturnType="Collection(WI08.GWLISTFAC_SRV.ListInvoice)" EntitySet="ListInvoiceSet" m:HttpMethod="GET" sap:action-for="WI08.GWLISTFAC_SRV.ListInvoice">
+                    <Parameter Name="Bukrs" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Kunnr" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Fecha_Ini" Type="Edm.String" Mode="In"/>
+                    <Parameter Name="Fecha_Fin" Type="Edm.String" Mode="In"/>
+                </FunctionImport>
+            </EntityContainer>
+            <atom:link rel="self" href="http://connect-system:3015/sap/opu/odata/wi08/GWLISTFAC_SRV/$metadata"
+                xmlns:atom="http://www.w3.org/2005/Atom"/>
+                <atom:link rel="latest-version" href="http://connect-system:3015/sap/opu/odata/wi08/GWLISTFAC_SRV/$metadata"
+                    xmlns:atom="http://www.w3.org/2005/Atom"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

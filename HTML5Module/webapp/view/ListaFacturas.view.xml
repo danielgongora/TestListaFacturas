@@ -1,0 +1,22 @@
+<mvc:View controllerName="com.wise.HTML5Module.controller.ListaFacturas" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                    <List
+						headerText="Lista de Facturas"
+						items="{/ListInvoiceSet}">
+						<items>
+							<ObjectListItem
+								title="{Kunnrnam}"
+								number="{Bukrs}"
+								intro="{Kunnr}" />
+						</items>
+					</List>
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
